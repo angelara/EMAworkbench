@@ -35,9 +35,9 @@ def get_SALib_problem(uncertainties):
     for u in uncertainties:
         lower = u.lower_bound
         upper = u.upper_bound
-        if isinstance(u, IntegerParameter):
-            upper += 1 # to deal with floorin in generate_samples
-        
+        # if isinstance(u, IntegerParameter):
+        #     upper += 1 # to deal with floorin in generate_samples
+        #
         bounds.append((lower, upper))
 
     problem = {'num_vars': len(uncertainties),
@@ -156,7 +156,7 @@ class MorrisSampler(SALibSampler):
         Stating this variable to be true causes the function to ignore gurobi.
     '''
 
-    def __init__(self, num_levels=4, optimal_trajectories=None,
+    def __init__(self, num_levels=5, optimal_trajectories=None,
                  local_optimization=True):
         super(MorrisSampler, self).__init__()
         self.num_levels = num_levels

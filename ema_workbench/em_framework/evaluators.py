@@ -373,7 +373,7 @@ def perform_experiments(models, scenarios=0, policies=0, evaluator=None,
     uncertainty_union : boolean, optional
     lever_union : boolean, optional
     uncertainty_sampling : {LHS, MC, FF, PFF, SOBOL, MORRIS, FAST}, optional
-    lever_sampling : {LHS, MC, FF, PFF, SOBOL, MORRIS, FAST}, optional
+    levers_sampling : {LHS, MC, FF, PFF, SOBOL, MORRIS, FAST}, optional
     callback  : Callback instance, optional
     return_callback : boolean, optional
 
